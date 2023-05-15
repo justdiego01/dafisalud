@@ -1,16 +1,28 @@
-// LISTAR PRODUCTOS
+// Obtener referencias a los elementos del formulario
+const fechaInput = document.getElementById("fechacita");
+const citaDiv = document.querySelector(".border.border-dark.mb-2");
+
+// Escuchar el evento de envío del formulario
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evitar que el formulario se envíe
+
+  // Obtener los valores de fecha y hora de la cita seleccionada
+  const fechaCita = fechaInput.value;
+
+  // Mostrar la cita seleccionada en el div correspondiente
+  citaDiv.textContent = `${fechaCita}`;
+});
+
+
+/* // LISTAR PRODUCTOS
 function listar() {
     Swal.fire({
-        title: 'LISTA DE PRODUCTOS',
+        title: 'Citas',
         html: '<b>Cargando...</b>',
         didOpen: () => {
             Swal.showLoading()
         }
     });
-
-
-
-
 
     $.ajax({
         url: 'http://localhost:3999/api/paciente',
@@ -26,10 +38,11 @@ function listar() {
                     dataFila += "<tr>";
                     dataFila += "<td>" + varPaciente.idPaciente + "</td>";
                     dataFila += "<td>" + varPaciente.nombres + "</td>";
+                    dataFila += "<td>" + varPaciente.apellidos + "</td>";
                     dataFila += "<td>" + varPaciente.dni + "</td>";
-                    dataFila += "<td>" + varPaciente.direccion + "</td>";
-                    dataFila += "<td>" + varPaciente.especialidad + "</td>";
-                    dataFila += "<td>" + varPaciente.cita + "</td>";
+                    dataFila += "<td>" + varPaciente.genero + "</td>";
+                    dataFila += "<td>" + varPaciente.edad + "</td>";
+                    dataFila += "<td>" + varPaciente.fechnac + "</td>";
                     dataFila += "<td>" + varPaciente.estado + "</td>";
                     dataFila += "<td>" +
                         "<button type='button' class='btn btn-warning' data-toggle='modal' data-target='#myModal'  onclick='buscar("
@@ -42,7 +55,6 @@ function listar() {
         }
     });
 }
-
 
 function guardar() {
     if(!MyForm.checkValidity()){
@@ -64,8 +76,8 @@ function guardar() {
                 data: {
                     idPaciente: $("#txtIdPaciente").val(),
                     nombres: $("#txtNombres").val(),
+                    apellidos: $("#txtApellidos").val(),
                     dni: $("#txtDni").val(),
-                    direccion: $("#txtDireccion").val(),
                     especialidad: $("#txtEspecialidad").val(),
                     cita: $("#txtCita").val(),
                     estado: $("#cboEstado").val()
@@ -87,12 +99,13 @@ function guardar() {
 function limpiarForm() {
     $("#txtIdPaciente").val(0);
     $("#t#txtNombres").val("");
+    $("#t#txtApellidos").val("");
     $("#txtDni").val("");
-    $("#txtDireccion").val("");
     $("#txtEspecialidad").val("");
     $("#txtCita").val("");
     $("#txtEstado").val("");
 }
+
 function buscar(idPaciente) {
     $.ajax({
         url: 'http://localhost:3999/api/paciente/' + idPaciente,
@@ -102,14 +115,11 @@ function buscar(idPaciente) {
             var varPaciente = respuesta.paciente;
             $("#txtIdPaciente").val(varPaciente.idPaciente);
             $("#txtNombres").val(varPaciente.nombres);
+            $("#txtApellidos").val(varPaciente.apellidos);
             $("#txtDni").val(varPaciente.dni);
-            $("#txtDireccion").val(varPaciente.direccion);
             $("#txtEspecialidad").val(varPaciente.especialidad);
             $("#txtCita").val(varPaciente.cita);
             $("#txtEstado").val(varPaciente.estado);
         }
     });
-
-}
-
-
+} */

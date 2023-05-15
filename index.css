@@ -10,10 +10,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(to right, blue, #ce1d61);
+    background: linear-gradient(to right, #5CC6D0, #5CC6D0);
 }
 
 form {
+    width: 27rem;
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -24,19 +25,22 @@ form {
 
 form .title {
     color: #252525;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 30px;
 }
 
 form label {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
     margin-bottom: 35px;
 }
 
 form label .fa-solid {
     font-size: 20px;
-    color: #cb232c;
-    margin-right: 10px;
+    color: gray;
+    margin-right: 15px;
 }
 
 form label input {
@@ -44,7 +48,7 @@ form label input {
     border: none;
     color: #252525;
     border-bottom: solid 1px #ce1d61;
-    padding: 0 5px;
+    padding: 0;
     font-size: 18px;
 }
 
@@ -61,7 +65,7 @@ form .link {
 form button {
     color: #fff;
     border: none;
-    background: linear-gradient(to right, #cb232c, #ce1d61);
+    background: linear-gradient(to right, #5CC6D0, #5CC6D0);
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
