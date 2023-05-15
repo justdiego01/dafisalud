@@ -1,9 +1,10 @@
 // Obtener referencias a los elementos del formulario
 const fechaInput = document.getElementById("fechacita");
 const citaDiv = document.querySelector(".border.border-dark.mb-2");
+const formfecha = document.getElementById("formfecha");
 
 // Escuchar el evento de envío del formulario
-document.querySelector("form").addEventListener("submit", function(event) {
+formfecha.addEventListener("submit", function (event) {
   event.preventDefault(); // Evitar que el formulario se envíe
 
   // Obtener los valores de fecha y hora de la cita seleccionada
@@ -12,7 +13,6 @@ document.querySelector("form").addEventListener("submit", function(event) {
   // Mostrar la cita seleccionada en el div correspondiente
   citaDiv.textContent = `${fechaCita}`;
 });
-
 
 /* // LISTAR PRODUCTOS
 function listar() {
