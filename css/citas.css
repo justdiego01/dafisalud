@@ -1,0 +1,32 @@
+.d-flex img{
+
+    width:  186px;
+    height:  226px;
+    display:  flex;
+    justify-content: top;
+    margin-left: 0%;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    border-radius: 5%;
+    overflow:  hidden;
+} 
+
+/* body{
+    background-color: chocolate;
+}
+
+.container{
+    
+    background-color: aliceblue;
+} */
+
+html{
+    margin-top: 45px;
+    margin-bottom: 35px;
+}
+
+/* pt-5 container" */
+
+.pt-5 {
+
+}

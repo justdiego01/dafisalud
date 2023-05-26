@@ -18,6 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/citas.css">
   </head>
 
   <body>
@@ -39,6 +40,7 @@
             <div class="mt-5 d-flex justify-content-between">
               <div class="d-flex">
                 <div>
+                  
                   <p class="font-weight-bold">Nombre:</p>
                   <p class="border border-dark">Ramero</p>
                   <p class="font-weight-bold">Apellidos:</p>
@@ -51,11 +53,29 @@
                   <p class="border border-dark">23/05/90</p>
                   <p class="font-weight-bold">Celular:</p>
                   <p class="border border-dark">987 764 654</p>
+                </div>
+              </div>
+              <div class="dep">
+                <form >
+                  <img alt="Pascienteimg" src="../Pascienteimg.jpg">
                   <p class="font-weight-bold">E-mail:</p>
                   <p class="border border-dark">ino@gmail.com</p>
-                  <p class="font-weight-bold">Especialidad:</p>
-                  <p class="border border-dark">Pediatría</p>
-                </div>
+                  <label for="sedes" class="font-weight-bold">Sedes</label><br>
+                  <select name="sedes" id="sedes" class="border border-dark" onchange="changeForm()">
+                    <option value="Escoger Sede" class="border border-dark">Escoger Sede</option>
+                    <option value="San Miguel" class="border border-dark">San Miguel</option>
+                    <option value="Surco" class="border border-dark">Surco</option>
+                    <option value="La Molina" class="border border-dark">La Molina</option>
+                    <option value="Lince" class="border border-dark">Lince</option>
+                  </select><br>
+                  <br>
+                  <div id="especialidadForm">
+                    <label for="lang" class="font-weight-bold">Especialidad</label><br>
+                    <select name="Especialidad" id="lang" class="border border-dark">
+                      <option value="Sin Especialidad" class="border border-dark">Sin Especialidad</option>
+                    </select>
+                  </div>
+                </form>
               </div>
       
               <div class="border-left border-dark"></div>
