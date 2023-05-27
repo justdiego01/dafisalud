@@ -8,64 +8,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <form action="" id="MyForm">
+    <form id="formregister">
         <h1 class="title">Registra tus datos</h1>
         <label>
           <i class="fa-solid fa-user"></i>
-          <input placeholder="Nombres" type="text" id="nombres" required>
+          <input placeholder="Nombres" type="text" id="nombres">
         </label>
         <label>
           <i class="fa-solid fa-user"></i>
-          <input placeholder="Apellidos" type="text" id="apellidos" required>
+          <input placeholder="Apellidos" type="text" id="apellidos">
         </label>
         <label>
           <div class="d-flex justify-content-between">
             <i class="fa-solid fa-user-group"></i>
-            <input type="radio" name="genero" value="masculino" required> Masculino
-            <input type="radio" name="genero" value="femenino" required> Femenino
+            <input type="radio" name="genero" value="Masculino">Masculino
+            <input type="radio" name="genero" value="Femenino">Femenino
           </div>
         </label>
         <label>
           <i class="fa-solid fa-id-badge"></i>
-          <input placeholder="DNI" type="number" id="dni" required>
+          <input placeholder="DNI" type="number" id="dni">
         </label>
         <label>
           <div class="d-flex justify-content-between">
             <i class="fa-solid fa-calendar"></i>
-            <input type="date" id="fechnacimiento" required>
+            <input type="date" id="fechnacimiento">
           </div>
         </label>
         <label>
           <i class="fa-solid fa-mail-bulk"></i>
-          <input placeholder="Correo electrónico" type="email" id="email" required>
+          <input placeholder="Correo electrónico" type="email" id="email">
         </label>
         <label>
           <i class="fa-solid fa-phone"></i>
-          <input placeholder="Teléfono" type="tel" id="telefono" required>
+          <input placeholder="Teléfono" type="tel" id="telefono">
         </label>
-        <!-- <label>
-          <i class="fa-solid fa-user-doctor"></i>
-          <p>Especialidad: </p>
-          <select type='text' class="form-control" id="especialidad" required>
-            <option>Alergología</option>
-            <option>Cardiología</option>
-            <option>Dermatología</option>
-            <option>Ecografía</option>
-            <option>Endocrinología</option>
-            <option>Gastroenterología</option>
-            <option>Medicina General</option>
-            <option>Medicina Interna</option>
-            <option>Neumología</option>
-            <option>Neurología</option>
-            <option>Nutrición</option>
-            <option>Odontología</option>
-            <option>Oftalmología</option>
-            <option>Otorrinolaringología</option>
-            <option>Pediatría</option>
-            <option>Urología</option>
-        </select>
-        </label> -->
-        <button id="btnregistro" onclick="location.href='./pages/sistema.html'">Registrar</button>
+        <button type="submit">Registrar</button>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
     <script src="index.js"></script>

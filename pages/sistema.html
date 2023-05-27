@@ -20,7 +20,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/sistema.css">
 </head>
-
 <body id="body-pd">
     <header class="header d-flex justify-content-between" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i></div>
@@ -34,24 +33,19 @@
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div> 
-              <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">DAFI</span> </a>
+              <a href="sistema.html" class="nav_logo active"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">DAFI</span> </a>
                 <div class="nav_list"> 
-                  <a href="#" class="nav_link active"> <i onclick="cargarHTML('citas.html')" class='bx bx-grid-alt nav_icon'></i> <span class="nav_name" onclick="cargarHTML('citas.html')">RESERVAR CITAS</span> </a> 
-                  <a href="#" class="nav_link"> <i onclick="cargarHTML('reprogramacion.html')" class='bx bx-user nav_icon'></i> <span class="nav_name" onclick="cargarHTML('reprogramacion.html')">REPROGRAMACIÓN</span> </a> 
-                  <a href="#" class="nav_link"> <i onclick="cargarHTML('documentacion.html')" class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name" onclick="cargarHTML('documentacion.html')">DOCUMENTACIÓN</span> </a> 
-                  <a href="#" class="nav_link"> <i onclick="cargarHTML('medicamentos.html')" class='bx bx-bookmark nav_icon'></i> <span class="nav_name" onclick="cargarHTML('medicamentos.html')">MEDICAMENTOS</span> </a> 
-                  <a href="#" class="nav_link"> <i onclick="cargarHTML('citasprogramadas.html')" class='bx bx-folder nav_icon'></i> <span class="nav_name" onclick="cargarHTML('citasprogramadas.html')">CITAS PROGRAMADAS</span> </a>  
-                </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Cerrar Sesión</span> </a>
+                  <a href="citas.html" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">RESERVAR CITAS</span> </a> 
+                  <a href="reprogramacion.html" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">REPROGRAMACIÓN</span> </a> 
+                  <a href="documentacion.html" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">DOCUMENTACIÓN</span> </a> 
+            </div> <a href="../index.html" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Cerrar Sesión</span> </a>
         </nav>
     </div>
-    
     <!--Container Main start-->
     <div id="seccionCargada">
         <h4 class="h3 pt-3">Bienvenidos al nuevo sistema de DafiSalud, el mejor red de políclinicos donde no tomamos en juego tu salud.</h4>
     </div>
     <!--Container Main end-->
-
     <script src="../js/sistema.js" type="text/javascript"></script>
     <script src="../js/sistema2.js" type="text/javascript"></script>
 </body>
