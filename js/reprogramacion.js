@@ -1,3 +1,4 @@
+const nombresCompletosInput = document.getElementById("nombrecompleto")
 const nombresInput = document.getElementById("nombres")
 const apellidosInput = document.getElementById("apellidos")
 const generoInput = document.getElementById("genero")
