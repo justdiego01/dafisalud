@@ -9,8 +9,8 @@ const storedData = localStorage.getItem("data");
 
 if (storedData) {
   const data = JSON.parse(storedData);
-  
-  nombresCompletosInput.value = data.nombres;
+
+  nombresCompletosInput.textContent = data.nombres;
   nombresInput.value = data.nombres;
   apellidosInput.value = data.apellidos;
   generoInput.value = data.genero;
