@@ -65,7 +65,7 @@ function changeForm() {
       </select>`;
   } else {
     especialidadForm.innerHTML = `
-      <label for="lang" class="font-weight-bold">Escoga una Sede</label><br>
+      <label for="lang" class="font-weight-bold">Especialidad</label><br>
       <select name="Especialidad" id="lang" class="border border-dark">
       </select>`;
   }
