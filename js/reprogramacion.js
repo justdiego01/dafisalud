@@ -5,15 +5,13 @@ const generoInput = document.getElementById("genero")
 const dniInput = document.getElementById("dni")
 const fechNacimientoInput = document.getElementById("fechnacimiento")
 
-const storedData = localStorage.getItem("data");
+const storedData = JSON.parse(localStorage.getItem("data"));
 
 if (storedData) {
-  const data = JSON.parse(storedData);
-
-  nombresCompletosInput.textContent = data.nombres;
-  nombresInput.value = data.nombres;
-  apellidosInput.value = data.apellidos;
-  generoInput.value = data.genero;
-  dniInput.value = data.dni;
-  fechNacimientoInput.value = data.fechnacimiento;
+  nombresCompletosInput.textContent = storedData.nombres;
+  nombresInput.value = storedData.nombres;
+  apellidosInput.value = storedData.apellidos;
+  generoInput.value = storedData.genero;
+  dniInput.value = storedData.dni;
+  fechNacimientoInput.value = storedData.fechnacimiento;
 }

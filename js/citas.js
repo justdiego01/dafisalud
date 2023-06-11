@@ -1,24 +1,70 @@
-const nombresCompletosInput = document.getElementById("nombrecompleto")
-const nombresInput = document.getElementById("nombres")
-const apellidosInput = document.getElementById("apellidos")
-const generoInput = document.getElementById("genero")
-const dniInput = document.getElementById("dni")
-const fechNacimientoInput = document.getElementById("fechnacimiento")
-const telefonoInput = document.getElementById("telefono")
-const emailInput = document.getElementById("email")
-const storedData = localStorage.getItem("data");
+const nombresCompletosInput = document.getElementById("nombrecompleto");
+const nombresInput = document.getElementById("nombres");
+const apellidosInput = document.getElementById("apellidos");
+const generoInput = document.getElementById("genero");
+const dniInput = document.getElementById("dni");
+const fechNacimientoInput = document.getElementById("fechnacimiento");
+const telefonoInput = document.getElementById("telefono");
+const emailInput = document.getElementById("email");
+const btnGuardar = document.getElementById("btnGuardar");
+const datosLocalStorage = JSON.parse(localStorage.getItem("data"));
 
-if (storedData) {
-  const data = JSON.parse(storedData);
-  nombresCompletosInput.textContent = data.nombres;
-  nombresInput.textContent = data.nombres;
-  apellidosInput.textContent = data.apellidos;
-  generoInput.textContent = data.genero;
-  dniInput.textContent = data.dni;
-  fechNacimientoInput.textContent = data.fechnacimiento;
-  telefonoInput.textContent = data.telefono;
-  emailInput.textContent = data.email;
+
+if (datosLocalStorage) {
+  nombresCompletosInput.textContent = datosLocalStorage.nombres;
+  nombresInput.textContent = datosLocalStorage.nombres;
+  apellidosInput.textContent = datosLocalStorage.apellidos;
+  generoInput.textContent = datosLocalStorage.genero;
+  dniInput.textContent = datosLocalStorage.dni;
+  fechNacimientoInput.textContent = datosLocalStorage.fechnacimiento;
+  telefonoInput.textContent = datosLocalStorage.telefono;
+  emailInput.textContent = datosLocalStorage.email;
 }
+
+
+function limpiarInputs() {
+  const sedeSelect = document.getElementById("sedes");
+  const especialidadSelect = document.getElementById("lang");
+  const fechaInput = document.getElementById("fechacita");
+  const horaInput = document.getElementById("horacita");
+
+  sedeSelect.value = "";
+  especialidadSelect.value = "";
+  fechaInput.value = "";
+  horaInput.value = "";
+}
+
+
+function guardarDatos(e) {
+  e.preventDefault();
+
+  const sedeSelect = document.getElementById("sedes");
+  const especialidadSelect = document.getElementById("lang");
+  const fechaInput = document.getElementById("fechacita");
+  const horaInput = document.getElementById("horacita");
+
+  if (
+    especialidadSelect.value &&
+    sedeSelect.value &&
+    fechaInput.value &&
+    horaInput.value
+  ) {
+    data = {
+      ...datosLocalStorage,
+      especialidad: especialidadSelect.value,
+      sede: sedeSelect.value,
+      fecha: fechaInput.value,
+      hora: horaInput.value,
+    };
+    localStorage.setItem("data", JSON.stringify(data));
+    limpiarInputs()
+    swal.fire("¡Éxito!", "Los datos se han guardado exitosamente.", "success");
+  } else {
+    swal.fire("Error", "Por favor, complete todos los campos requeridos.", "error");
+  }
+}
+
+btnGuardar.addEventListener("click", guardarDatos);
 
 function changeForm() {
   var sedesSelect = document.getElementById("sedes");
